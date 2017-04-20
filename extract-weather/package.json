@@ -1,0 +1,22 @@
+{
+  "name": "convert",
+  "version": "1.0.0",
+  "description": "Final Project for Big Data Management, Spring 2017",
+  "main": "convert.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shenghuayou/MTA-Turnstile.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shenghuayou/MTA-Turnstile/issues"
+  },
+  "homepage": "https://github.com/shenghuayou/MTA-Turnstile#readme",
+  "dependencies": {
+    "child_process": "^1.0.2"
+  }
+}

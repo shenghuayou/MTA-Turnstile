@@ -1,1 +1,4 @@
+weather
+node_modules*
 dataset
+.ipynb_checkpoints
