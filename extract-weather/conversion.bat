@@ -1,1 +1,1 @@
-xlstocsv.vbs C:/Users/Victor/Desktop/MTA-Turnstile/weather/12-2016.xls weather-data/12-2016.csv
+xlstocsv.vbs C:/Users/Victor/Desktop/MTA-Turnstile/dataset/raw-weather/2-2011.xls weather-data/02-2011.csv

@@ -33,9 +33,9 @@ fs.writeFile('weather.csv', '', { flag: 'wx' }, function (err) {
     if (err) throw err;
 });
 
-for(var year = 2011; year < 2017; year++) {
+for(var year = 2010; year < 2011; year++) {
   dataArr = [];
-  for(var month = 1; month < 13; month++) {
+  for(var month = 12; month < 13; month++) {
     if (month < 10)
       filename = '../dataset/weather-data/0'+month+'-'+year+'.csv';
     if (month >= 10)
