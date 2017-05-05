@@ -1,8 +1,16 @@
 # MTA-Turnstile
-Final Project for Big Data Management, Spring 2017
+*Final Project for Big Data Management, Spring 2017*
 
-Dependencies: Python, Javascript
+## Group Members
+* [Shenghua You](https://github.com/shenghuayou), shenghuayou@gmail.com
+* [Victor Fung](https://github.com/VictorFung1), victor.fung122@gmail.com
+* [Simon Ling](https://github.com/simonvista), simon-ling@hotmail.com
 
-Weather Data
-- extracted via HTML tables from wunderground as XLS files
-- converted from XLS to CSV files using javascript and requires Microsoft Excel and Windows
+## Dependencies
+* Languages: Python, Javascript
+* Framework: Spark
+* Cluster: Hadoop, HDFS (HUE)
+
+## Datasets
+* MTA Turnstile Dataset - http://web.mta.info/developers/turnstile.html
+* Wunderground - https://www.wunderground.com/
