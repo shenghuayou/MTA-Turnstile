@@ -28,8 +28,8 @@
 
 * The code used on Hadoop, view the following code:
   * [Hadoop - Price Hike Dayweek.py](https://github.com/shenghuayou/MTA-Turnstile/blob/master/Hadoop%20-%20Weather%20Dayweek.py)
-  * [Hadoop - Price Hike Monthly.py](https://github.com/shenghuayou/MTA-Turnstile/blob/master/Hadoop%20-%20Price Hike%20Monthly.py)
-  * [Hadoop - Price Hike Overall.py](https://github.com/shenghuayou/MTA-Turnstile/blob/master/Hadoop%20-%20Price Hike%20Overall.py)
+  * [Hadoop - Price Hike Monthly.py](https://github.com/shenghuayou/MTA-Turnstile/blob/master/Hadoop%20-%20Price%20Hike%20Monthly.py)
+  * [Hadoop - Price Hike Overall.py](https://github.com/shenghuayou/MTA-Turnstile/blob/master/Hadoop%20-%20Price%20Hike%20Overall.py)
   * [Hadoop - Seasons Overall.py](https://github.com/shenghuayou/MTA-Turnstile/blob/master/Hadoop%20-%20Seasons%20Overall.py)
   * [Hadoop - Weather Dayweek.py](https://github.com/shenghuayou/MTA-Turnstile/blob/master/Hadoop%20-%20Weather%20Dayweek.py)
   * [Hadoop - Weather Overall.py](https://github.com/shenghuayou/MTA-Turnstile/blob/master/Hadoop%20-%20Weather%20Overall.py)
