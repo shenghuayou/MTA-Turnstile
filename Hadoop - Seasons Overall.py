@@ -44,16 +44,16 @@ if __name__=='__main__':
 
     rdd2 = rdd1.filter(lambda x: 'Spring' in x[0]) \
                 .take(10)
-    rdd2.saveAsTextFile('projSeasonsSpring')
+    rdd2.saveAsTextFile('hdfs:///user/vfung000/project/projSeasonsSpring')
 
     rdd3 = rdd1.filter(lambda x: 'Summer' in x[0]) \
                 .take(10)
-    rdd3.saveAsTextFile('projSeasonsSummer')
+    rdd3.saveAsTextFile('hdfs:///user/vfung000/project/projSeasonsSummer')
 
     rdd4 = rdd1.filter(lambda x: 'Fall' in x[0]) \
                 .take(10)
-    rdd4.saveAsTextFile('projSeasonsFall')
+    rdd4.saveAsTextFile('hdfs:///user/vfung000/project/projSeasonsFall')
 
     rdd5 = rdd1.filter(lambda x: 'Winter' in x[0]) \
                 .take(10)
-    rdd5.saveAsTextFile('projSeasonsWinter')
+    rdd5.saveAsTextFile('hdfs:///user/vfung000/project/projSeasonsWinter')

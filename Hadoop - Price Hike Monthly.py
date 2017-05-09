@@ -59,4 +59,4 @@ if __name__=='__main__':
                 .sortByKey(True) \
                 .collect()
 
-    rdd6.saveAsTextFile("projWeatherMonthly")
+    rdd6.saveAsTextFile("hdfs:///user/vfung000/project/projWeatherMonthly")

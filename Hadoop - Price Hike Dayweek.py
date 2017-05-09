@@ -73,4 +73,4 @@ if __name__=='__main__':
                 .sortByKey(True) \
                 .collect()
 
-    rdd9.saveAsTextFile("projWeatherDayweek")
+    rdd9.saveAsTextFile("hdfs:///user/vfung000/project/projWeatherDayweek")

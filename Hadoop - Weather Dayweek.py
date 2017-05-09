@@ -65,4 +65,4 @@ if __name__=='__main__':
                .collect()
 
     # output
-    rdd6.saveAsTextFile("projWeatherDayweek")
+    rdd6.saveAsTextFile("hdfs:///user/vfung000/project/projWeatherDayweek")

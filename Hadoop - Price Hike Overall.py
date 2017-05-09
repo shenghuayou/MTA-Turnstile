@@ -73,4 +73,4 @@ if __name__=='__main__':
                 .collect()
 
     # output
-    rdd3.saveAsTextFile("priceHikeOverall")
+    rdd3.saveAsTextFile("hdfs:///user/vfung000/project/priceHikeOverall")
