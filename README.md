@@ -35,7 +35,7 @@
   * [Hadoop - Weather Overall.py](https://github.com/shenghuayou/MTA-Turnstile/blob/master/Hadoop%20-%20Weather%20Overall.py)
 
 
-## Running on the Hadoop Cluster with Sparks and accessing files in HUE framework
+## Running on the Hadoop with Sparks and accessing files in HDFS
 * Make the python file executable
 ```
 Command:
@@ -45,7 +45,7 @@ Example:
 $ hadoop fs -chmod +x /user/vfung000/project/python-code.py
 ```
 
-* Executing on the cluster
+* Executing on the [cluster](http://spark.apache.org/docs/latest/submitting-applications.html)
 ```
 Command:
 $ spark-submit --name <name of job> \
