@@ -2,7 +2,6 @@
 
 # load libraries
 import pyspark
-import sys
 import datetime as dt
 
 def mapper7(index,data):
@@ -47,17 +46,11 @@ if __name__=='__main__':
 
     # to run the program on cluster
     # spark-submit --name "projWeatherDayweek" \
-    #             hdfs:///user/vfung000/project/Hadoop - Price Hike Dayweek.py \
-    #             hdfs:///user/vfung000/project/clean-mta-data/clean-mta-data.csv \
-    #             weatherDayweek
-
-    if len(sys.argv) < 3:
-        print "Usage: <clean mta loc> <output filename>"
-        sys.exit(-1)
+    #             hdfs:///user/vfung000/project/HadoopPHD.py \
 
     # load pyspark
     sc = pyspark.SparkContext()
-    mtaData = sc.textFile(sys.argv[1],use_unicode=False).cache()
+    mtaData = sc.textFile('hdfs:///user/vfung000/project/clean-mta-data/clean-mta-data.csv',use_unicode=False).cache()
 
     # Gather the number of passengers by weekday,period
     # returns ((weekday, period), num_passengers)
@@ -80,4 +73,4 @@ if __name__=='__main__':
                 .sortByKey(True) \
                 .collect()
 
-    rdd9.saveAsTextFile(sys.argv[-1])
+    rdd9.saveAsTextFile("projWeatherDayweek")

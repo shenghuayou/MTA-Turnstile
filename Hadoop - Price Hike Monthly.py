@@ -2,7 +2,6 @@
 
 # load libraries
 import pyspark
-import sys
 import datetime as dt
 
 def mapper4(index,data):
@@ -30,17 +29,11 @@ if __name__=='__main__':
 
     # to run the program on cluster
     # spark-submit --name "projWeatherMonthly" \
-    #             hdfs:///user/vfung000/project/Hadoop - Price Hike Monthly.py \
-    #             hdfs:///user/vfung000/project/clean-mta-data/clean-mta-data.csv \
-    #             weatherMonthly
-
-    if len(sys.argv) < 3:
-        print "Usage: <clean mta loc> <output filename>"
-        sys.exit(-1)
+    #             hdfs:///user/vfung000/project/HadoopPHM.py \
 
     # load pyspark
     sc = pyspark.SparkContext()
-    mtaData = sc.textFile(sys.argv[1],use_unicode=False).cache()
+    mtaData = sc.textFile('hdfs:///user/vfung000/project/clean-mta-data/clean-mta-data.csv',use_unicode=False).cache()
 
     # For each month gather the number of passengers
     # return (%m/%Y, num_passengers)
@@ -66,4 +59,4 @@ if __name__=='__main__':
                 .sortByKey(True) \
                 .collect()
 
-    rdd6.saveAsTextFile(sys.argv[-1])
+    rdd6.saveAsTextFile("projWeatherMonthly")

@@ -33,3 +33,25 @@
   * [Hadoop - Seasons Overall.py](https://github.com/shenghuayou/MTA-Turnstile/blob/master/Hadoop%20-%20Seasons%20Overall.py)
   * [Hadoop - Weather Dayweek.py](https://github.com/shenghuayou/MTA-Turnstile/blob/master/Hadoop%20-%20Weather%20Dayweek.py)
   * [Hadoop - Weather Overall.py](https://github.com/shenghuayou/MTA-Turnstile/blob/master/Hadoop%20-%20Weather%20Overall.py)
+
+
+## Running on the Hadoop Cluster with Sparks and accessing files in HUE framework
+* Make the python file executable
+```
+Command:
+$ hadoop fs -chmod +x <your python file location>
+
+Example:
+$ hadoop fs -chmod +x /user/vfung000/project/python-code.py
+```
+
+* Executing on the cluster
+```
+Command:
+$ spark-submit --name <name of job> \
+                <python code location>
+
+Example:
+$ spark-submit --name "projWeatherDayweek" \
+              hdfs:///user/vfung000/project/HadoopPHD.py \
+```
