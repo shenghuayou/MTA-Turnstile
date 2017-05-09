@@ -36,10 +36,6 @@ def mapper2(index,data):
 
 if __name__=='__main__':
 
-    # to run the program on cluster
-    # spark-submit --name "projWeatherOverall" \
-    #             hdfs:///user/vfung000/project/HadoopWO.py \
-
     # load pyspark
     sc = pyspark.SparkContext()
     mtaData = sc.textFile('hdfs:///user/vfung000/project/clean-mta-data/clean-mta-data.csv',use_unicode=False).cache()
@@ -63,7 +59,7 @@ if __name__=='__main__':
     # d = date; e = event; c = count; s = summation
     # returns (event, average_peple_per_weather)
     rdd3 = rdd1.join(rdd2) \
-               .map(lambda (e, (s, c)): (e, s/c)) 
+               .map(lambda (e, (s, c)): (e, s/c))
 
     # output
     rdd3.coalesce(1,True).saveAsTextFile("hdfs:///user/vfung000/project/projWeatherOverall")

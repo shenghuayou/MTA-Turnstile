@@ -28,10 +28,6 @@ def mapper1(index,data):
 
 if __name__=='__main__':
 
-    # to run the program on cluster
-    # spark-submit --name "projSeasons" \
-    #             hdfs:///user/vfung000/project/HadoopSO.py \
-
     # load pyspark
     sc = pyspark.SparkContext()
     mtaData = sc.textFile('hdfs:///user/vfung000/project/clean-mta-data/clean-mta-data.csv',use_unicode=False).cache()

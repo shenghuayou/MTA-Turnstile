@@ -27,10 +27,6 @@ def mapper5(index,data):
 
 if __name__=='__main__':
 
-    # to run the program on cluster
-    # spark-submit --name "projWeatherMonthly" \
-    #             hdfs:///user/vfung000/project/HadoopPHM.py \
-
     # load pyspark
     sc = pyspark.SparkContext()
     mtaData = sc.textFile('hdfs:///user/vfung000/project/clean-mta-data/clean-mta-data.csv',use_unicode=False).cache()

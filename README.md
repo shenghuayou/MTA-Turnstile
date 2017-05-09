@@ -49,9 +49,11 @@ $ hadoop fs -chmod +x /user/vfung000/project/python-code.py
 ```
 Command:
 $ spark-submit --name <name of job> \
+               --num-executors <number> \
                 <python code location>
 
 Example:
 $ spark-submit --name "projWeatherDayweek" \
-              hdfs:///user/vfung000/project/HadoopPHD.py \
+               --num-executors 10 \
+               hdfs:///user/vfung000/project/HadoopPHD.py \
 ```
