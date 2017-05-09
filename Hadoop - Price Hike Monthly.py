@@ -56,7 +56,6 @@ if __name__=='__main__':
     # returns (date, avg)
     rdd6 = rdd4.join(rdd5) \
                 .map(lambda (d, (s, c)): (d, s/c)) \
-                .sortByKey(True) \
-                .collect()
+                .sortByKey(True)
 
-    rdd6.saveAsTextFile("hdfs:///user/vfung000/project/projWeatherMonthly")
+    rdd6.coalesce(1,True).saveAsTextFile("hdfs:///user/vfung000/project/projWeatherMonthly")

@@ -63,8 +63,7 @@ if __name__=='__main__':
     # d = date; e = event; c = count; s = summation
     # returns (event, average_peple_per_weather)
     rdd3 = rdd1.join(rdd2) \
-               .map(lambda (e, (s, c)): (e, s/c)) \
-               .collect()
+               .map(lambda (e, (s, c)): (e, s/c)) 
 
     # output
-    rdd3.saveAsTextFile("hdfs:///user/vfung000/project/projWeatherOverall")
+    rdd3.coalesce(1,True).saveAsTextFile("hdfs:///user/vfung000/project/projWeatherOverall")

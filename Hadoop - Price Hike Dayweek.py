@@ -70,7 +70,6 @@ if __name__=='__main__':
     # returns ((weekday,period), avg)
     rdd9 = rdd7.join(rdd8) \
                 .map(lambda ((d,p),(s,c)): ((d,p), s/c)) \
-                .sortByKey(True) \
-                .collect()
+                .sortByKey(True)
 
-    rdd9.saveAsTextFile("hdfs:///user/vfung000/project/projWeatherDayweek")
+    rdd9.coalesce(1,True).saveAsTextFile("hdfs:///user/vfung000/project/projWeatherDayweek")

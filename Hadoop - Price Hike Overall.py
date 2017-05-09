@@ -69,8 +69,7 @@ if __name__=='__main__':
     # return (category, avg)
     rdd3 = rdd1.join(rdd2) \
                 .map(lambda (cat,(s,c)): (cat, s/c)) \
-                .sortByKey() \
-                .collect()
+                .sortByKey()
 
     # output
-    rdd3.saveAsTextFile("hdfs:///user/vfung000/project/priceHikeOverall")
+    rdd3.coalesce(1,True).saveAsTextFile("hdfs:///user/vfung000/project/priceHikeOverall")
