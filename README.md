@@ -14,3 +14,22 @@
 ## Datasets
 * MTA Turnstile Dataset - http://web.mta.info/developers/turnstile.html
 * Wunderground - https://www.wunderground.com/
+
+## About this repository
+* For the analysis results, view the ipython notebooks:
+  * [Analysis - MTA Base Fare.ipynb](https://github.com/shenghuayou/MTA-Turnstile/blob/master/Analysis%20-%20MTA%20Price%20Hike.ipynb)
+  * [Analysis - MTA Popular Place.ipynb](https://github.com/shenghuayou/MTA-Turnstile/blob/master/Analysis%20-%20MTA%20Popular%20Places.ipynb)
+  * [Analysis - MTA Weather Effect.ipynb](https://github.com/shenghuayou/MTA-Turnstile/blob/master/Analysis%20-%20MTA%20Weather%20Effect.ipynb)
+
+* To view the pysparks code used to obtain the results in the analysis, view the ipython notebooks:
+  * [Sparks - MTA Popular Place.ipynb](https://github.com/shenghuayou/MTA-Turnstile/blob/master/Sparks%20-%20MTA%20Popular%20Place.ipynb)
+  * [Sparks - MTA Price Hike.ipynb](https://github.com/shenghuayou/MTA-Turnstile/blob/master/Sparks%20-%20MTA%20Price%20Hike.ipynb)
+  * [Sparks - MTA Weather Effect.ipynb](https://github.com/shenghuayou/MTA-Turnstile/blob/master/Sparks%20-%20MTA%20Weather%20Effect.ipynb)
+
+* The code used on Hadoop, view the following code:
+  * [Hadoop - Price Hike Dayweek.py](https://github.com/shenghuayou/MTA-Turnstile/blob/master/Hadoop%20-%20Weather%20Dayweek.py)
+  * [Hadoop - Price Hike Monthly.py](https://github.com/shenghuayou/MTA-Turnstile/blob/master/Hadoop%20-%20Price Hike%20Monthly.py)
+  * [Hadoop - Price Hike Overall.py](https://github.com/shenghuayou/MTA-Turnstile/blob/master/Hadoop%20-%20Price Hike%20Overall.py)
+  * [Hadoop - Seasons Overall.py](https://github.com/shenghuayou/MTA-Turnstile/blob/master/Hadoop%20-%20Seasons%20Overall.py)
+  * [Hadoop - Weather Dayweek.py](https://github.com/shenghuayou/MTA-Turnstile/blob/master/Hadoop%20-%20Weather%20Dayweek.py)
+  * [Hadoop - Weather Overall.py](https://github.com/shenghuayou/MTA-Turnstile/blob/master/Hadoop%20-%20Weather%20Overall.py)
