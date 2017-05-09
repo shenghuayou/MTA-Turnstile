@@ -2,7 +2,6 @@
 
 # load libraries
 import pyspark
-import sys
 
 def mapper1(index,data):
     # skip header row
@@ -39,17 +38,11 @@ if __name__=='__main__':
 
     # to run the program on cluster
     # spark-submit --name "projWeatherOverall" \
-    #             hdfs:///user/vfung000/project/Hadoop - Weather Overall.py \
-    #             hdfs:///user/vfung000/project/clean-mta-data/clean-mta-data.csv \
-    #             weatherOverall
-
-    if len(sys.argv) < 3:
-        print "Usage: <clean mta loc> <output filename>"
-        sys.exit(-1)
+    #             hdfs:///user/vfung000/project/HadoopWO.py \
 
     # load pyspark
     sc = pyspark.SparkContext()
-    mtaData = sc.textFile(sys.argv[1],use_unicode=False).cache()
+    mtaData = sc.textFile('hdfs:///user/vfung000/project/clean-mta-data/clean-mta-data.csv',use_unicode=False).cache()
 
     # sum up all the entry by weather
     # returns (event, total_people)
@@ -74,4 +67,4 @@ if __name__=='__main__':
                .collect()
 
     # output
-    rdd3.saveAsTextFile(sys.argv[-1])
+    rdd3.saveAsTextFile("hdfs:///user/vfung000/project/projWeatherOverall")

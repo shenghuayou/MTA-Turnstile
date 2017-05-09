@@ -2,7 +2,6 @@
 
 # load libraries
 import pyspark
-import sys
 
 def mapper1(index,data):
     # skip header row
@@ -31,17 +30,11 @@ if __name__=='__main__':
 
     # to run the program on cluster
     # spark-submit --name "projSeasons" \
-    #             hdfs:///user/vfung000/project/Hadoop - Seasons Overall.py \
-    #             hdfs:///user/vfung000/project/clean-mta-data/clean-mta-data.csv \
-    #             season
-
-    if len(sys.argv) < 3:
-        print "Usage: <clean mta loc> <output filename>"
-        sys.exit(-1)
+    #             hdfs:///user/vfung000/project/HadoopSO.py \
 
     # load pyspark
     sc = pyspark.SparkContext()
-    mtaData = sc.textFile(sys.argv[1],use_unicode=False).cache()
+    mtaData = sc.textFile('hdfs:///user/vfung000/project/clean-mta-data/clean-mta-data.csv',use_unicode=False).cache()
 
     # sum up all the entry by weather
     # returns (event, total_people)
@@ -51,16 +44,16 @@ if __name__=='__main__':
 
     rdd2 = rdd1.filter(lambda x: 'Spring' in x[0]) \
                 .take(10)
-    rdd2.saveAsTextFile(str(sys.argv[-1])+'Spring')
+    rdd2.saveAsTextFile('hdfs:///user/vfung000/project/projSeasonsSpring')
 
     rdd3 = rdd1.filter(lambda x: 'Summer' in x[0]) \
                 .take(10)
-    rdd3.saveAsTextFile(str(sys.argv[-1])+'Summer')
+    rdd3.saveAsTextFile('hdfs:///user/vfung000/project/projSeasonsSummer')
 
     rdd4 = rdd1.filter(lambda x: 'Fall' in x[0]) \
                 .take(10)
-    rdd4.saveAsTextFile(str(sys.argv[-1])+'Fall')
+    rdd4.saveAsTextFile('hdfs:///user/vfung000/project/projSeasonsFall')
 
     rdd5 = rdd1.filter(lambda x: 'Winter' in x[0]) \
                 .take(10)
-    rdd5.saveAsTextFile(str(sys.argv[-1])+'Winter')
+    rdd5.saveAsTextFile('hdfs:///user/vfung000/project/projSeasonsWinter')
