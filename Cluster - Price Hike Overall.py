@@ -68,4 +68,4 @@ if __name__=='__main__':
                 .sortByKey()
 
     # output
-    rdd3.coalesce(1,True).saveAsTextFile("hdfs:///user/vfung000/project/priceHikeOverall")
+    rdd3.coalesce(1,True).saveAsTextFile("hdfs:///user/vfung000/project/projPriceHikeOverall")

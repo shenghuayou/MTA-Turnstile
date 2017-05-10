@@ -39,17 +39,30 @@ if __name__=='__main__':
                         .sortBy(lambda x: x[1],ascending=False)
 
     rdd2 = rdd1.filter(lambda x: 'Spring' in x[0]) \
-                .take(10)
-    rdd2.coalesce(1,True).saveAsTextFile('hdfs:///user/vfung000/project/projSeasonsSpring')
+                .zipWithIndex() \
+                .filter(lambda x: x[1] < 10) \
+                .map(lambda x: x[0]) \
+                .coalesce(1,True).saveAsTextFile('hdfs:///user/vfung000/project/projSeasonsSpring')
 
     rdd3 = rdd1.filter(lambda x: 'Summer' in x[0]) \
-                .take(10)
-    rdd3.coalesce(1,True).saveAsTextFile('hdfs:///user/vfung000/project/projSeasonsSummer')
+                .zipWithIndex() \
+                .filter(lambda x: x[1] < 10) \
+                .map(lambda x: x[0]) \
+                .coalesce(1,True).saveAsTextFile('hdfs:///user/vfung000/project/projSeasonsSummer')
 
     rdd4 = rdd1.filter(lambda x: 'Fall' in x[0]) \
-                .take(10)
-    rdd4.coalesce(1,True).saveAsTextFile('hdfs:///user/vfung000/project/projSeasonsFall')
+                .zipWithIndex() \
+                .filter(lambda x: x[1] < 10) \
+                .map(lambda x: x[0]) \
+                .coalesce(1,True).saveAsTextFile('hdfs:///user/vfung000/project/projSeasonsFall')
 
     rdd5 = rdd1.filter(lambda x: 'Winter' in x[0]) \
-                .take(10)
-    rdd5.coalesce(1,True).saveAsTextFile('hdfs:///user/vfung000/project/projSeasonsWinter')
+                .zipWithIndex() \
+                .filter(lambda x: x[1] < 10) \
+                .map(lambda x: x[0]) \
+                .coalesce(1,True).saveAsTextFile('hdfs:///user/vfung000/project/projSeasonsWinter')
+
+    rdd2
+    rdd3
+    rdd4
+    rdd5

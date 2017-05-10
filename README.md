@@ -34,7 +34,6 @@
   * [Cluster - Weather Dayweek.py](https://github.com/shenghuayou/MTA-Turnstile/blob/master/Cluster%20-%20Weather%20Dayweek.py)
   * [Cluster - Weather Overall.py](https://github.com/shenghuayou/MTA-Turnstile/blob/master/Cluster%20-%20Weather%20Overall.py)
 
-
 ## Running on the Hadoop with Sparks and accessing files in HDFS
 * Make the python file executable
 ```
