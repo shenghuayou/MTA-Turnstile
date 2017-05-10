@@ -1,10 +1,1 @@
-(('Summer', '34 ST-PENN STA'), 73333783)
-(('Summer', '42 ST-GRD CNTRL'), 62449863)
-(('Summer', '34 ST-HERALD SQ'), 48578546)
-(('Summer', '86 ST'), 44222320)
-(('Summer', '14 ST-UNION SQ'), 44190218)
-(('Summer', '42 ST-PA BUS TE'), 40996359)
-(('Summer', '42 ST-TIMES SQ'), 39624473)
-(('Summer', 'FULTON ST'), 34662545)
-(('Summer', '125 ST'), 33109561)
-(('Summer', '96 ST'), 32549552)
+[(('Summer', '34 ST-PENN STA'), 73333783),(('Summer', '42 ST-GRD CNTRL'), 62449863),(('Summer', '34 ST-HERALD SQ'), 48578546),(('Summer', '86 ST'), 44222320),(('Summer', '14 ST-UNION SQ'), 44190218),(('Summer', '42 ST-PA BUS TE'), 40996359),(('Summer', '42 ST-TIMES SQ'), 39624473),(('Summer', 'FULTON ST'), 34662545),(('Summer', '125 ST'), 33109561),(('Summer', '96 ST'), 32549552)]

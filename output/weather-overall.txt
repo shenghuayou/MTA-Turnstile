@@ -1,9 +1,1 @@
-('Fog , Rain', 4722427)
-('Fog', 5243310)
-('Fog , Rain , Snow', 4365354)
-('Rain , Snow', 4619726)
-('Thunderstorm', 2311591)
-('Fog , Snow', 3844535)
-('Snow', 4354041)
-('Clear Skies', 4639989)
-('Rain', 4715522)
+[('Fog , Rain', 4722427),('Fog', 5243310),('Fog , Rain , Snow', 4365354),('Rain , Snow', 4619726),('Thunderstorm', 2311591),('Fog , Snow', 3844535),('Snow', 4354041),('Clear Skies', 4639989),('Rain', 4715522)]
