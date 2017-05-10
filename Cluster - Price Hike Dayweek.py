@@ -68,4 +68,4 @@ if __name__=='__main__':
                 .map(lambda ((d,p),(s,c)): ((d,p), s/c)) \
                 .sortByKey(True)
 
-    rdd9.coalesce(1,True).saveAsTextFile("hdfs:///user/vfung000/project/projWeatherDayweek")
+    rdd9.coalesce(1,True).saveAsTextFile("hdfs:///user/vfung000/project/projPriceHikeDayweek")
