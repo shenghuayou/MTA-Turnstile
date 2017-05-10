@@ -1,5 +1,5 @@
 # MTA-Turnstile
-*Final Project for Big Data Management, Spring 2017*
+*The goal of the project is to analyze the data gathered by the MTA from their turnstiles which would allow us to analyze any trends that occur throughout different parts of the year, such as by month, days of the week and weather.*
 
 ## Group Members
 * [Shenghua You](https://github.com/shenghuayou), shenghuayou@gmail.com
