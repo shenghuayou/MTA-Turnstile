@@ -17,6 +17,6 @@ for files in listFiles:
     with open(files,'r') as readFile:
         for line in readFile.readlines():
             string += '(' + line[1:-2] + '),'
-    newString = '[' + string[:-1] + ']'
+    newString = '[' + string[1:-1] + ']'
     with open(files,'w') as writeFile:
         writeFile.write(newString)

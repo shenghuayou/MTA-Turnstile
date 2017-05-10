@@ -5,3 +5,4 @@ derby.log
 metastore_db
 .ipynb*
 metastore_db*
+temp.py
